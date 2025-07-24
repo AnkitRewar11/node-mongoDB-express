@@ -1,5 +1,5 @@
-let mongoose = require('mongoose');
-let userEnquirySchema = new mongoose.Schema({
+import { Schema, model } from 'mongoose';
+let userEnquirySchema = new Schema({
     name: {
         type: String,
         required: true
@@ -22,4 +22,4 @@ let userEnquirySchema = new mongoose.Schema({
         required: true  
     }
 });
-module.exports = mongoose.model('UserEnquiry', userEnquirySchema);
+export default model('UserEnquiry', userEnquirySchema);
